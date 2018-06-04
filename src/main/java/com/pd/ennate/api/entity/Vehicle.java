@@ -1,11 +1,16 @@
 package com.pd.ennate.api.entity;
 
-import com.fasterxml.jackson.core.SerializableString;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.math.BigInteger;
 import java.util.Date;
+
+/**
+ * @author Pratik Belhekar
+ *	Date : 06/03/2018
+ *	Version : 1.0.0
+ *
+ *	This is Vehicle Entity for ORM mapping.
+ */
 
 @Entity
 public class Vehicle {
@@ -75,5 +80,16 @@ public class Vehicle {
         this.lastServiceDate = lastServiceDate;
     }
 
-
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vin='" + vin + '\'' +
+                ", make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", redlineRpm=" + redlineRpm +
+                ", maxFuelVolume=" + maxFuelVolume +
+                ", lastServiceDate=" + lastServiceDate +
+                '}';
+    }
 }
